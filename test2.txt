@@ -1,0 +1,189 @@
+Write a C++ program to change the case (lower to upper and upper to lower cases)of each character of a given string.
+
+Solution
+
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+string str;
+cout<<"Enter the string"<<endl;
+cin>>str;
+for(size_t i=0;i<str.length();i++)
+{
+if(isupper(str[i]))
+{
+str[i]=tolower(str[i]);
+}
+else
+{
+str[i]=toupper(str[i]);
+}
+}
+cout<<str;
+return 0;
+}
+==========================================================
+Given a maximum of 100 digit numbers as input, find the difference between the sum of odd and even position digits.
+#include <iostream>
+#include <string.h>
+#include <stdlib.h>
+using namespace std;
+int main()
+{
+int a = 0,b = 0,i = 0, n;
+char num[100];
+cin>> num;
+n = strlen(num);
+while(n>0)
+{
+if(i==0)
+{
+a+=num[n-1]-48;
+n--;
+i=1;
+}
+else
+{
+b+=num[n-1]-48;
+n--;
+i=0;
+}
+}
+cout<< abs(a-b);
+return 0;
+}
+==========================================================
+3.temperature conversation
+#include<iostream>
+using namespace std;
+float c_f(float);
+float f_c(float);
+int main()
+{
+  float temp;
+  cout<<"\nENTER TEMPERATURE IN CELSIUS : ";
+  cin>>temp;
+  cout<<"TEMPERATURE IN FAHRENHEIT IS : "<<c_f(temp);
+  cout<<"\n\nENTER TEMPERATURE IN FAHRENHEIT : ";
+  cin>>temp;
+  cout<<"TEMPERATURE IN CELSIUS IS : "<<f_c(temp);
+  return 0;
+}
+float c_f(float celsius)
+{
+  float fahrenheit=(celsius*9.0)/5.0+32;
+  return fahrenheit;
+}
+float f_c(float fahrenheit)
+{
+  float celsius=5.0*(fahrenheit-32)/9.0;
+  return celsius;
+}
+============================================
+
+4.copy string
+#include<iostream>
+
+#include<stdio.h>
+#include<string>
+
+using namespace std;
+
+int main()
+
+{
+
+    char source[100], dst[100], i=0;
+
+    cout<<"Enter the string: ";
+
+    gets(source);
+    
+    
+
+    while(source[i]!='\0')
+
+    {
+
+        dst[i] = source[i];
+
+        i++;
+
+    }
+
+    dst[i] = '\0';
+
+    cout<<"original   "<<source<<endl;
+
+    cout<<"copy   "<<dst<<endl;
+
+    cout<<endl;
+
+    return 0;
+
+}
+====================================================================
+5.The date July 10, 1970 is special because when we write it in the 7/10/70 format, the month times the day equals the year. Write a program that asks the user to enter a month
+( in numeric form ), a day and a two digit year. The program should determine whether the month times the day is equal to the year.
+
+(i) If so, it should display a message saying date is UNIQUE
+(ii) Otherwise it should display a message saying the date is NOT UNIQUE
+
+
+#include <iostream>
+using namespace std;
+int main(){int day, month,year ,unique;
+cout<<"Kindly input your date,month and year , i will tell you if your date is Unique"<<endl;
+cout<<"\n Enter date , month , year that you wish for me to calculate for you "<<endl;
+cin>> day >> month >> year;
+unique = month*day;
+if(month>0 && month<=12 && day>0 && day<=31 && year>=10 && year<=99)
+{
+if (unique == year){
+cout<< "The date is UNIQUE"<<endl;
+}
+else{
+cout<<"The date is NOT UNIQUE"<<endl;
+}
+}
+else{
+cout << "Enter valid month date and year "<<endl;
+}
+return 0;
+}
+================================================================
+6.Write a program to determine the Area and Perimeter of a Rectangle   
+
+ 
+#include<iostream> 
+
+using namespace std; 
+
+ 
+int main()
+{ 
+
+    int width,height,area,perimeter; 
+
+    cout<<"Enter  Width of Rectangle = "; 
+    
+    cin>>width; 
+
+    cout<<"Enter  Height of Rectangle = "; 
+
+    cin>>height; 
+
+    area=height*width; 
+
+    cout<<"Area of Rectangle ="<<area<<endl; 
+
+    perimeter=2*(height+width); 
+
+cout<<" Perimeter of rectangle are = "<<perimeter<<endl; 
+
+return 0; 
+} 
+=====================================================================================
+
